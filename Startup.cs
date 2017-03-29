@@ -32,7 +32,9 @@ namespace WebApplicationBasic
         {
             // Add framework services.
             services.AddMvc();
-            services.AddDbContext<HeroesContext>(opt => opt.UseSqlServer("Data Source=tomaszeqhomebudget.database.windows.net;Initial Catalog=HallOFHeroes;Integrated Security=False;User ID=tomaszeq;Password=1sasasa1!;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=true"));
+			
+			// Set your Database Connection string.
+            services.AddDbContext<HeroesContext>(opt => opt.UseSqlServer(""));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
